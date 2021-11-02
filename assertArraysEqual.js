@@ -12,18 +12,16 @@
 // };
 
 const assertArrayEquals = function (arrayOne, arrayTwo) {
-  const eqArrays = function (array1, array2) {
-    if (array1.length === array2.length) {
-      for (let i in array1) {
-        if (array1[i] !== array2[i]) {
-          return false;
-        }
+  if (arrayOne.length === arrayTwo.length) {
+    for (let i in arrayOne) {
+      if (arrayOne[i] !== arrayTwo[i]) {
+        return false;
       }
-      return true;
-    } else {
-      return false;
     }
-  };
+    return true;
+  } else {
+    return false;
+  }
 };
 
 // assertArrayEquals(eqArrays(arr));
